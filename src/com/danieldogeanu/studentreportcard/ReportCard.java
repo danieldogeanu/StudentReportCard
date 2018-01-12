@@ -110,14 +110,14 @@ public class ReportCard {
         String averageShortened = average.substring(0, 4);
 
         // Build the string to return.
-        StringBuilder string = new StringBuilder("Name: " + studentName + "; ")
-                .append("English Grade: " + Integer.toString(englishGrade) + "; ")
-                .append("Math Grade: " + Integer.toString(mathGrade) + "; ")
-                .append("History Grade: " + Integer.toString(historyGrade) + "; ")
-                .append("Biology Grade: " + Integer.toString(biologyGrade) + "; ")
-                .append("Geography Grade: " + Integer.toString(geographyGrade) + "; ")
-                .append("Chemistry Grade: " + Integer.toString(chemistryGrade) + "; ")
-                .append("Physics Grade: " + Integer.toString(physicsGrade) + "; ")
+        StringBuilder string = new StringBuilder("Name: " + this.getStudentName() + "; ")
+                .append("English Grade: " + Integer.toString(this.getEnglishGrade()) + "; ")
+                .append("Math Grade: " + Integer.toString(this.getMathGrade()) + "; ")
+                .append("History Grade: " + Integer.toString(this.getHistoryGrade()) + "; ")
+                .append("Biology Grade: " + Integer.toString(this.getBiologyGrade()) + "; ")
+                .append("Geography Grade: " + Integer.toString(this.getGeographyGrade()) + "; ")
+                .append("Chemistry Grade: " + Integer.toString(this.getChemistryGrade()) + "; ")
+                .append("Physics Grade: " + Integer.toString(this.getPhysicsGrade()) + "; ")
                 .append("Student Average: " + averageShortened);
         return string.toString();
     }
