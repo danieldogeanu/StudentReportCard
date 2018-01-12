@@ -29,15 +29,15 @@ public class ReportCard {
      * @param name Student name.
      * @param grades Grades for all disciplines, in order: English, Math, History, Biology, Geography, Chemistry, Physics.
      */
-    public ReportCard(String name, ArrayList<Integer> grades) {
+    public ReportCard(String name, int[] grades) {
         studentName = name;
-        englishGrade = grades.get(0);
-        mathGrade = grades.get(1);
-        historyGrade = grades.get(2);
-        biologyGrade = grades.get(3);
-        geographyGrade = grades.get(4);
-        chemistryGrade = grades.get(5);
-        physicsGrade = grades.get(6);
+        englishGrade = grades[0];
+        mathGrade = grades[1];
+        historyGrade = grades[2];
+        biologyGrade = grades[3];
+        geographyGrade = grades[4];
+        chemistryGrade = grades[5];
+        physicsGrade = grades[6];
         studentAverage = calculateStudentAverage();
     }
 

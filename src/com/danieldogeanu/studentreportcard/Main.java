@@ -16,5 +16,10 @@ public class Main {
 
         System.out.println(studentOne.toString());
 
+        int[] studentTwoGrades = {7,5,4,7,7,9,6};
+        ReportCard studentTwo = new ReportCard("Jane Doe", studentTwoGrades);
+
+        System.out.println(studentTwo.toString());
+
     }
 }
