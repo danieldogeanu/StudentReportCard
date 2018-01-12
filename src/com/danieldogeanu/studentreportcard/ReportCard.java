@@ -27,17 +27,23 @@ public class ReportCard {
     /**
      * Constructor for the ReportCard.
      * @param name Student name.
-     * @param grades Grades for all disciplines, in order: English, Math, History, Biology, Geography, Chemistry, Physics.
+     * @param english English grade (int).
+     * @param math Math grade (int).
+     * @param history History grade (int).
+     * @param biology Biology grade (int).
+     * @param geography Geography grade (int).
+     * @param chemistry Chemistry grade (int).
+     * @param physics Physics grade (int).
      */
-    public ReportCard(String name, int[] grades) {
+    public ReportCard(String name, int english, int math, int history, int biology, int geography, int chemistry, int physics) {
         studentName = name;
-        englishGrade = grades[0];
-        mathGrade = grades[1];
-        historyGrade = grades[2];
-        biologyGrade = grades[3];
-        geographyGrade = grades[4];
-        chemistryGrade = grades[5];
-        physicsGrade = grades[6];
+        englishGrade = english;
+        mathGrade = math;
+        historyGrade = history;
+        biologyGrade = biology;
+        geographyGrade = geography;
+        chemistryGrade = chemistry;
+        physicsGrade = physics;
     }
 
     /** Empty constructor for the ReportCard with default values. */

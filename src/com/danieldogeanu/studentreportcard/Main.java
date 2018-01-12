@@ -1,5 +1,7 @@
 package com.danieldogeanu.studentreportcard;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,13 +17,7 @@ public class Main {
         studentOne.setPhysicsGrade(9);
 
         System.out.println(studentOne.toString());
-        System.out.println(studentOne.getStudentAverage());
-
-        int[] studentTwoGrades = {7,5,4,7,7,9,6};
-        ReportCard studentTwo = new ReportCard("Jane Doe", studentTwoGrades);
-
-        System.out.println(studentTwo.toString());
-        System.out.println(studentTwo.getStudentAverage());
+        System.out.println("----");
 
     }
 }
