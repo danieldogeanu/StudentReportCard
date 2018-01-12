@@ -1,7 +1,5 @@
 package com.danieldogeanu.studentreportcard;
 
-import java.util.ArrayList;
-
 public class ReportCard {
 
     /** Student Name */
