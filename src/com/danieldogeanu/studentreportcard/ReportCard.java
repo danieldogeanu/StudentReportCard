@@ -82,7 +82,8 @@ public class ReportCard {
 
     /** Calculate the student average grade. */
     private float calculateStudentAverage() {
-        return (englishGrade + mathGrade + historyGrade + biologyGrade + geographyGrade + chemistryGrade + physicsGrade) / 7;
+        int gradesSum = englishGrade + mathGrade + historyGrade + biologyGrade + geographyGrade + chemistryGrade + physicsGrade;
+        return (float) gradesSum / (float) 7;
     }
 
     /** Set student average grade. */
@@ -96,8 +97,18 @@ public class ReportCard {
         return studentAverage;
     }
 
+    /**
+     * Overwrite the toString() method.
+     * @return A string with all the student details.
+     */
     @Override
     public String toString() {
+        // Get studentAverage and return a shortened version.
+        // We don't need to know all the decimal points.
+        String average = Float.toString(this.getStudentAverage());
+        String averageShortened = average.substring(0, 4);
+
+        // Build the string to return.
         StringBuilder string = new StringBuilder("Name: " + studentName + "; ")
                 .append("English Grade: " + Integer.toString(englishGrade) + "; ")
                 .append("Math Grade: " + Integer.toString(mathGrade) + "; ")
@@ -106,7 +117,7 @@ public class ReportCard {
                 .append("Geography Grade: " + Integer.toString(geographyGrade) + "; ")
                 .append("Chemistry Grade: " + Integer.toString(chemistryGrade) + "; ")
                 .append("Physics Grade: " + Integer.toString(physicsGrade) + "; ")
-                .append("Student Average: " + Float.toString(this.getStudentAverage()));
+                .append("Student Average: " + averageShortened);
         return string.toString();
     }
 }
