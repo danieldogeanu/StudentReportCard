@@ -1,5 +1,8 @@
 package com.danieldogeanu.studentreportcard;
 
+/**
+ * Creates a report card for each student to show all their grades.
+ */
 public class ReportCard {
 
     /** Student Name */
