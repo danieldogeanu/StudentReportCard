@@ -21,7 +21,7 @@ public class ReportCard {
     private int chemistryGrade;
     private int physicsGrade;
 
-    /** Overall student average grade. */
+    /** Overall student average grade. This is not a field. */
     private float studentAverage;
 
     /**
@@ -38,7 +38,6 @@ public class ReportCard {
         geographyGrade = grades[4];
         chemistryGrade = grades[5];
         physicsGrade = grades[6];
-        studentAverage = calculateStudentAverage();
     }
 
     /** Empty constructor for the ReportCard with default values. */
@@ -51,7 +50,6 @@ public class ReportCard {
         geographyGrade = 0;
         chemistryGrade = 0;
         physicsGrade = 0;
-        studentAverage = calculateStudentAverage();
     }
 
     /** Get and set the student name. */
@@ -76,12 +74,20 @@ public class ReportCard {
     public void setChemistryGrade(int grade) { chemistryGrade = grade; }
     public void setPhysicsGrade(int grade) { physicsGrade = grade; }
 
-    /** Get student average grade. */
-    public float getStudentAverage() { return studentAverage; }
-
     /** Calculate the student average grade. */
     private float calculateStudentAverage() {
         return (englishGrade + mathGrade + historyGrade + biologyGrade + geographyGrade + chemistryGrade + physicsGrade) / 7;
+    }
+
+    /** Set student average grade. */
+    private void setStudentAverage() {
+        this.studentAverage = calculateStudentAverage();
+    }
+
+    /** Get student average grade. */
+    public float getStudentAverage() {
+        setStudentAverage();
+        return studentAverage;
     }
 
     @Override
@@ -94,7 +100,7 @@ public class ReportCard {
                 .append("Geography Grade: " + Integer.toString(geographyGrade) + "; ")
                 .append("Chemistry Grade: " + Integer.toString(chemistryGrade) + "; ")
                 .append("Physics Grade: " + Integer.toString(physicsGrade) + "; ")
-                .append("Student Average: " + Float.toString(studentAverage));
+                .append("Student Average: " + Float.toString(this.getStudentAverage()));
         return string.toString();
     }
 }

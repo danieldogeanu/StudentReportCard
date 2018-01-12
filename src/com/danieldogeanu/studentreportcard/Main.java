@@ -10,16 +10,18 @@ public class Main {
         studentOne.setMathGrade(7);
         studentOne.setHistoryGrade(5);
         studentOne.setBiologyGrade(10);
-        studentOne.setGeographyGrade(8);
+        studentOne.setGeographyGrade(3);
         studentOne.setChemistryGrade(8);
         studentOne.setPhysicsGrade(9);
 
         System.out.println(studentOne.toString());
+        System.out.println(studentOne.getStudentAverage());
 
         int[] studentTwoGrades = {7,5,4,7,7,9,6};
         ReportCard studentTwo = new ReportCard("Jane Doe", studentTwoGrades);
 
         System.out.println(studentTwo.toString());
+        System.out.println(studentTwo.getStudentAverage());
 
     }
 }
